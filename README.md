@@ -1,91 +1,71 @@
-# 🎯 Walmart Sales Forecasting
+# 📊 Walmart Sales Time Series Forecasting
 
 ## 📌 Project Overview
-This project focuses on analyzing Walmart's weekly sales data to identify key trends and forecast future sales using time series forecasting and machine learning models. The dataset contains sales information from multiple Walmart outlets along with economic indicators such as unemployment rate, consumer price index (CPI), fuel prices, temperature, and holiday markers. 
+This project focuses on analyzing and forecasting Walmart's weekly sales using time series techniques. By leveraging exploratory data analysis (EDA) and machine learning models, we aim to uncover key sales trends, external factor influences, and predict future sales to optimize business strategies.
 
 ---
 
 ## 🎯 Objectives
-✅ **Exploratory Data Analysis (EDA)**
-   - 📊 Identify relationships between sales and economic factors.
-   - 📈 Detect seasonal sales trends and their causes.
-   - 🌡️ Examine the impact of unemployment, temperature, and CPI on sales.
-   - 🏆 Rank stores based on their performance.
-
-✅ **Data Preprocessing**
-   - 🔍 Handle missing values and outliers.
-   - 🏗️ Perform feature engineering.
-   - 🔢 Normalize and encode categorical variables.
-
-✅ **Sales Forecasting**
-   - 🔮 Build predictive models to forecast sales for the next 12 weeks.
-   - ⚖️ Compare different machine learning models.
+- ✅ Perform **EDA & Outlier Detection** to clean data.
+- ✅ Analyze **Unemployment, CPI, Temperature** impact on sales.
+- ✅ Identify **Top & Worst Performing Stores**.
+- ✅ Detect **Seasonal Trends** in sales data.
+- ✅ Use **SARIMA Model** for sales forecasting.
+- ✅ Predict **sales for the next 52 weeks**.
 
 ---
 
 ## 📂 Dataset Information
-- **📌 Total Rows:** 6435
 - **📌 Columns:** Store, Date, Weekly_Sales, Holiday_Flag, Temperature, Fuel_Price, CPI, Unemployment
 - **📌 Data Source:** Walmart historical sales records
 
 ---
 
 ## 🛠️ Methodology
-### 🔹 1. Data Cleaning & Preprocessing
-- 🛠️ Handled missing values in CPI and Unemployment.
-- 🔄 Merged different datasets (stores, features, and sales data).
-- 📆 Converted date values to datetime format and extracted year, month, and week.
-- 🚨 Detected and removed outliers using Z-score.
+### 🔹 1. Data Preprocessing
+- 🛠️ Handled missing values & outliers.
+- 📆 Converted dates & extracted features.
+- 🚀 Performed feature engineering.
 
 ### 🔹 2. Exploratory Data Analysis (EDA)
-- 📊 Monthly and weekly sales trends visualization.
-- 🔗 Correlation analysis between sales and external factors.
-- 🎉 Impact analysis of holidays on sales.
+- 📊 Visualized sales trends.
+- 🔗 Analyzed sales correlations with CPI, Temperature, & Unemployment.
+- 🎉 Identified seasonality effects (November peak due to holiday sales).
 
-### 🔹 3. Machine Learning Models for Forecasting
-🚀 **Implemented Models:**
-- 📏 Linear Regression
-- 🌲 Random Forest Regressor
-- 🤝 K-Nearest Neighbors (KNN) Regressor
-- ⚡ XGBoost Regressor
-- 🤖 Deep Neural Network (DNN)
-
-### 🔹 4. Model Evaluation
-✅ Models were evaluated using metrics like:
-  - 📉 Mean Absolute Error (MAE)
-  - 🧮 Mean Squared Error (MSE)
-  - 📏 Root Mean Squared Error (RMSE)
-  - 📊 R-squared score (R²)
-- 📊 Model accuracy comparison through visualization.
+### 🔹 3. Time Series Forecasting Model
+🚀 **Implemented SARIMA Model**:
+- 📏 Model Order: (0,1,0) Seasonal Order: (0,1,0,52)
+- 🔮 Forecasted **next 52 weeks of sales**
+- ⚖️ Evaluated model using **Mean Squared Error (MSE)**
 
 ---
 
 ## 📈 Results & Insights
-✔️ Sales show clear seasonal trends, with peaks during holiday seasons.
-✔️ Unemployment and CPI significantly impact sales in certain stores.
-✔️ XGBoost and Random Forest performed the best for sales forecasting.
-✔️ Deep Learning models also performed well but required more training time.
+✔️ Sales peak in **November due to holiday shopping**.
+✔️ Negative correlation between **temperature & sales**.
+✔️ **Top-performing stores** contribute ~4.31% to total sales.
+✔️ **Worst-performing stores** contribute ~0.69%.
+✔️ SARIMA effectively predicts sales trends.
 
 ---
 
 ## 🏁 Conclusion
-This project successfully explored Walmart's sales trends and built predictive models for future sales. The insights derived can help optimize inventory, improve store performance, and refine business strategies.
+This project successfully forecasts sales using time series analysis. The insights help Walmart optimize inventory, marketing, and demand planning strategies. Further tuning can improve model accuracy.
 
 ---
 
 ## 📦 Dependencies
 📌 Python Libraries Used:
 - 🐍 Pandas, NumPy, Matplotlib, Seaborn
-- 🔢 Scikit-learn, Statsmodels, XGBoost
-- 🤖 TensorFlow/Keras
+- 📊 Statsmodels, Scikit-learn
+- ⏳ SARIMA for time series forecasting
 
 ---
 
 ## 🚀 How to Run the Project
-1️⃣ Install the required dependencies: `pip install -r requirements.txt`
-2️⃣ Run `walmart_time_series_forecast.py` to execute the complete workflow.
-3️⃣ Check the `plots/` folder for visualizations and the `models/` folder for trained models.
+1️⃣ Install dependencies: `pip install -r requirements.txt`
+2️⃣ Run `timeseriescspro.py` to execute forecasting.
+3️⃣ Check generated plots and results.
 
----
  
 
