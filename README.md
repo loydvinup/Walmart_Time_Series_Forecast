@@ -87,7 +87,5 @@ This project successfully explored Walmart's sales trends and built predictive m
 3️⃣ Check the `plots/` folder for visualizations and the `models/` folder for trained models.
 
 ---
-
-## 📞 Contact
-For any queries, reach out to **📧 support@intellipaat.com** or call **📞 +91-7022374614** (India) / **📞 1-800-216-8930** (US Toll-Free).
+ 
 
